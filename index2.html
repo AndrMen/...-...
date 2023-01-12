@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Документ</title>
+</head>
+<body>
+	<div>
+		<h1>Регистрация пользователя</h1>
+		<textarea id="Login"></textarea>
+		<textarea id="Pass"></textarea>
+		<button id="registration">Зарегестрироваться</button>
+	</div>
+	<script type="text/javascript">
+
+		let arr = []
+		document.getElementById('registration').onclick = function() {
+			let param = document.getElementById('Login').value
+			if (document.getElementById('Pass').value.length >= 4 && document.getElementById('Pass').value.length <= 12) {
+				arr.push(document.getElementById('Login').value, document.getElementById('Pass').value)
+				alert("Пользователь зарегестрирован")
+			} else return
+		}
+	</script>	
+</body>
+</html>
